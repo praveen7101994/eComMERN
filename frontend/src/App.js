@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      EcomMERN
+      EcomMERN setup
     </div>
   );
 }
