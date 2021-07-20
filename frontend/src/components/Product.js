@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import image from './../../src/images/airpods.jpg';
 import Grid from '@material-ui/core/Grid';
+import Rating from './Rating'
 
 const useStyles = makeStyles({
   root: {
@@ -29,7 +30,7 @@ export default function Product({product}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={image}
+          image='./images/airpods.jpg'
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -40,7 +41,7 @@ export default function Product({product}) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
         </Button>
         <Button size="small" color="primary">
           Learn More
